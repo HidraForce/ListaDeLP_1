@@ -9,20 +9,23 @@ int main()
        scanf("%d",&num[i]);
     }
 
-    int j=0,k=0;
-    int fatorial[10];
+    int j=0,k;
+    int fatorial;
     for ( j = 0; j < 10; j++)
     {
-        for ( num[j]+1; k > 0; k--)
+      int count = num[j] - 1;
+        for ( count; k > 0; k--)
         {
-           fatorial[j] = num[j]*k;
+           fatorial = num[j]*k;
+           num[j]==fatorial;
         }
+        
         
     }
     int l = 0;
     for ( l = 0; l < 10; l++)
     {
-       printf("%d\n",fatorial[l]);
+       printf("%d\n",num[l]);
     }
     
     
