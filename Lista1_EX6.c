@@ -2,32 +2,29 @@
 
 int main()
 {
-    int i=0,num[10];
+    int i=0,num[10],fat[10],j=0,k=0,p=0;
     for ( i = 0; i < 10; i++)
     {
        printf("Insira um numero\n-->");
        scanf("%d",&num[i]);
     }
 
-    int j=0,k;
-    int fatorial;
-    for ( j = 0; j < 10; j++)
-    {
-      int count = num[j] - 1;
-        for ( count; k > 0; k--)
-        {
-           fatorial = num[j]*k;
-           num[j]==fatorial;
-        }
-        
-        
-    }
-    int l = 0;
-    for ( l = 0; l < 10; l++)
-    {
-       printf("%d\n",num[l]);
-    }
-    
+   for ( j = 0; j < 10; j++)
+   {
+      for (k = 0; k < num[j]; k++)
+      {
+         num[j] = num[j] * k;
+      }
+      
+   }
+   
+   for ( p = 0; p < 10; p++)
+   {
+      int count = p+1;
+      printf("O fatorial do %d° é: %d\n",count, num[p]);
+   }
+   
+
     
     
 }
