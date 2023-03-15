@@ -1,48 +1,66 @@
 #include <stdio.h>
+#include <stdlib.h>
+int teste_primo(int x)
+{
+    int i, resto = 0;
+    for (i = 1; i <= x; i++)
+    {
+        if (x % i == 0)
+        {
+            resto++;
+        }
+    }
+    if (resto == 2)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int dive_tres(int x)
+{
+    if (x % 3 != 0)
+    {
+        if (x > 10)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    else
+    {
+        return 0;
+    }
+}
 
 int main()
 {
-
-    //bloco Eentrada
-    int num[10];
-    int i = 0;
-    for ( i = 0; i < 10; i++)
+    int i, num, soma = 0, soma2 = 0, count = 0,media ;
+    for (i = 0; i < 10; i++)
     {
-       printf("Insira o %d° numero: \n",i+1);
-       scanf("%d",&num[i]);
-
-       
-    }
-
-    //bloco soma
-    int j= 0;
-    int soma = 0;
-    for ( j = 0; j < 10; j++)
-    {
-        
-        if( num[j]%num[j] == 0){
-            soma = soma + num[j];
+        printf("Insira UM NUMERO: \n-->");
+        scanf("%d", &num);
+        if (teste_primo(num) == 1)
+        {
+            soma = soma + num;
+        }
+        if (dive_tres(num) == 1){
+            soma2 = soma2 +num;
+            count++;
         }
     }
-    //bloco média
-    int k= 0;
-    int media = 0 ,sum = 0,count = 0;
-
-    for ( k = 0; k < 10; k++)
-    {
-        if(num[k]%3 == 0){
-            if(num[k]>10){
-                sum = sum + num[k];
-                count = count +1 ;
-            }
-        }
+    if(count>0 ){
+       media = soma2 /count;
+    }else{
+        media = 0;
     }
-    media = sum/count;
 
-    //Bloco saída
-    printf("A soma dos numeros primos é de : %d \n",soma);
+    printf("Soma dos primos igual a : %d\n", soma);
     printf("A média dos numero divisiveis por 3 e maior que 10 é de : %d",media);
-    
-    
-    
 }
