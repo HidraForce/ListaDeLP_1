@@ -28,6 +28,7 @@ int main()
          fatorial = fatorial * k;
       }
       fat[j] = fatorial;
+      printf("O fatorial de %d é %d",num[j], fatorial);
    }
 
    /**

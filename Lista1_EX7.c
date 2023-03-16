@@ -7,7 +7,7 @@ int main(int argc, char const *argv[])
     do
     {
 
-        printf("Insira sua idade: \n-->10");
+        printf("Insira sua idade: \n-->");
         scanf("%d", &age);
         total = total + age;
         count = count + 1;
@@ -15,5 +15,5 @@ int main(int argc, char const *argv[])
     } while (age != 0);
     med = total / count;
 
-    med > 0 ? printf("Média igual a : \n-->%d", med) : printf("Erro");
+    med > 0 ? printf("Média igual a : %d\n", med) : printf("Erro");
 }
