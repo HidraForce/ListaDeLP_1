@@ -1,7 +1,7 @@
 #include <stdio.h>
-int fatorial(int x)
+unsigned long long int fatorial(int x)
 {
-    int fat;
+    unsigned long long int fat;
 
     for (fat = 1; x > 1; x = x - 1){
         fat = fat * x;
@@ -9,18 +9,20 @@ int fatorial(int x)
     return fat;
         
 }
+//Maximo de 20 infelizmente ele não passa disso
 
 int main()
 {
-    int i,num,fat[10];
+    int i,num;
+    
+    
     for (i = 0; i < 10; i++)
     {
         printf("Insira um numero: ");
         scanf("%d",&num);
+       
 
-        fat[i] = fatorial(num);
-
-        printf("O fatorial de %d é %d\n",num,fatorial(num));
+        printf("O fatorial de %d é %llu\n",num,fatorial(num));
 
     }
 }
