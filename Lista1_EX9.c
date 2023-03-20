@@ -35,8 +35,16 @@ int main()
   }
 
   //Final calculations
+  float media_old;
   float media = total_idade / 10;
-  float media_old = total_old / count_old;
+  if (count_old > 0)
+  {
+    media_old = total_old / count_old;
+  }else{
+    media_old =0 ;
+  }
+  
+
 
   //Output
   printf("A média das idades é de: %f\n", media);
